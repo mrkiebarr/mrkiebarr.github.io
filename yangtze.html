@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	
+	<title>Yangtze River- GIS</title>
+
+	<link rel="shortcut icon" href="assets/images/gt_favicon.png">
+	
+	<!-- Bootstrap -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- Icon font -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/about.css">
+	<link rel="stylesheet" href="assets/css/slideshow.css"> <!-- Add this line -->
+
+	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+	<style>
+		#head {
+			background-image: url('assets/images/pastelgreen.jpg');
+			background-size: cover;
+			background-position: center;
+			height: 180px; /* Adjust height as needed */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		</style>
+</head>
+<body>
+
+	<header id="header">
+		<div id="head" class="parallax" parallax-speed="1">
+			<h1 id="logo" class="text-center">
+				<span class="title">Mark David Barranda</span>
+			</h1>
+		</div>
+	
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> 
+						<span class="sr-only">Toggle navigation</span> 
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span> 
+					</button>
+				</div>
+				
+				<div class="navbar-collapse collapse">
+					
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="sidebar-left.html">About Me</a></li>
+						<li><a href="project.html">Portfolio</a></li>						
+					</ul>
+				</div><!--/.nav-collapse -->			
+			</div>	
+		</nav>
+	</header>
+
+<main id="main">
+
+	<div class="container">
+
+		<div class="row topspace">
+			
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Submerged Vegetation from pre- and post- Three Gorges Dam completion</h1>
+				</header>
+
+				<!-- Slideshow container -->
+				<div class="slideshow-container">
+					<div class="mySlides">
+						<img src="assets/images/ThreeGorgesDam.jpg" alt="Image 1">
+					</div>
+					<div class="mySlides">
+						<img src="assets/images/1984.png" alt="Image 2">
+					</div>
+					<div class="mySlides">
+						<img src="assets/images/After.png" alt="Image 3">
+					</div>
+					<div class="mySlides">
+						<img src="assets/images/2012.png" alt="Image 4">
+					</div>
+					<div class="mySlides">
+						<img src="assets/images/Before.png" alt="Image 4">
+					</div>
+					<div class="mySlides">
+						<img src="assets/images/googleearthpro.yangtze.png" alt="Image 4">
+					</div>
+				</div>
+				<br>
+
+				<!-- Dots -->
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span> 
+					<span class="dot" onclick="currentSlide(2)"></span> 
+					<span class="dot" onclick="currentSlide(3)"></span> 
+					<span class="dot" onclick="currentSlide(4)"></span> 
+					<span class="dot" onclick="currentSlide(5)"></span> 
+					<span class="dot" onclick="currentSlide(6)"></span> 
+				</div>
+
+				<p>I used <strong>Google Earth Pro</strong> to extract imagery of the <strong>Three Gorges Dam</strong> from both <strong>2012</strong> and <strong>1984</strong>, allowing for a temporal comparison of the landscape before and after the dam's construction. The <strong>1984 imagery</strong> displayed the pre-dam landscape, highlighting vast areas of vegetated land and natural terrain. In contrast, the <strong>2012 imagery</strong> revealed significant changes, including the formation of a large reservoir behind the dam, which submerged approximately <strong>25.52 million square meters</strong> of land. This comparison illustrated the dramatic environmental transformation caused by the dam's construction.</p>
+
+<p>I used several key tools in <strong>ArcGIS Pro</strong> to further analyze the data:</p>
+<ul>
+    <li>The <strong>Contour Tool with 3D Analyst</strong> was employed to generate contour lines from the <strong>DEM</strong>, representing elevation levels and helping to visualize how the terrain and slopes were altered.</li>
+    <li>The <strong>Symmetrical Difference Tool</strong> was used to determine the specific areas of vegetated land submerged by the rising reservoir.</li>
+    <li><strong>Aspect and Slope Tools</strong> were applied to assess the dam's surrounding terrain, showing how slope angles influenced water retention behind the dam.</li>
+</ul>
+
+<p>Additionally, I compared the imagery's resolution and granularity, with the <strong>2012</strong> dataset offering much clearer detail compared to the lower resolution greenery of <strong>1984</strong>. This temporal analysis, supported by geoprocessing tools like <strong>Zonal Statistics</strong> and <strong>Raster Calculator</strong>, helped quantify the landscape changes and visualize the topographical impact of the dam’s construction.</p>
+				
+				<p><img id="berkeleylogo" src="assets/images/BerkeleyLogo.png" alt=""></p>
+			</article>
+			<!-- /Article -->
+
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+
+				<div class="widget">
+					<h4>Tools:</h4>
+					<ul>
+						<li> ArcGIS Pro </li>
+						<li> Google Earth Pro</li>
+						<li> DEM </li>
+					</ul>
+				</div>
+			</aside>			
+			<!-- /Sidebar -->
+			
+		</div>
+	</div>	<!-- /container -->
+	
+</main>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2024, Mark David Barranda<br> 
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/template.js"></script>
+
+<!-- Slideshow script -->
+<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		let dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+	}
+</script>
+
+</body>
+</html>

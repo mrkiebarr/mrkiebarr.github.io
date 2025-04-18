@@ -1,0 +1,409 @@
+/* Import the Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+/* Apply Montserrat as the primary font */
+html {
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat as the primary font */
+}
+
+body, header {
+    font: 100%;
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: darkcyan;
+}
+
+#navbar-1, #navbar-2, #navbar-3 {
+    cursor: pointer;
+}
+
+.navbar-item:hover {
+    opacity: 1;
+}
+
+.navbar-item {
+    margin-left: 10px;
+    margin-right: 10px;
+    float: right;
+    line-height: 60px;
+    opacity: 0.5;
+}
+
+#content {
+    background: #ffffff;
+    margin: 0 auto;
+    width: 100%; /* Make the content span the full width */
+    max-width: 2000px; /* Optional: Limit maximum width for large screens */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+#name {
+    font-size: xx-large;
+}
+
+#navbar-3 {
+    margin-top: 10px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+}
+
+#navbar-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Add some padding for better spacing */
+    background-color: #fefefe;
+}
+
+#navbar-1 .navbar-item:first-child {
+    margin-right: auto; /* Push the remaining items to the right */
+}
+
+#navbar-2 {
+    display: flex;
+    gap: 15px; /* Space between items */
+}
+
+.navbar-item {
+    line-height: 60px;
+    opacity: 0.8;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar-item:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.navbar-item a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.navbar-item a:visited {
+    color: inherit; 
+}
+
+.navbar-item a:hover {
+    text-decoration: underline; 
+    color: #000; 
+}
+
+.icon {
+    width: 24px; 
+    height: 24px; 
+    vertical-align: middle; 
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+#scroll-down {
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    cursor: pointer;
+    animation: bounce 2s infinite; 
+}
+
+#scroll-down img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px); /* Moves up slightly */
+    }
+}
+
+/* Container for the buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #333333; /* Default button color */
+    border: none;
+    border-radius: 5px; /* Semi-sharp edges */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.button:hover {
+    background-color: #000000; /* Turns black on hover */
+    color: #ffffff;
+}
+
+/* Portfolio Section */
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px auto;
+    padding: 20px;
+    padding-top: 100px;
+    margin-top: 50px;
+    max-width: 1200px; 
+    width: 90%; 
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Portfolio Summaries */
+.portfolio-summaries {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    justify-content: center; 
+    width: 100%; 
+}
+
+/* Individual Portfolio Item */
+.portfolio-item {
+    position: relative;
+    background-color: #ffffff;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: left; 
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Push tech stack to the bottom */
+    height: 100%; /* Make all rectangles the same height */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Standing-Up Rectangles */
+.rect-decoration {
+    position: absolute;
+    width: 30px; /* Width of the rectangle */
+    height: 50px; /* Height of the rectangle */
+    background-color: #333;
+    top: -20px; /* Positioned above the portfolio rectangle */
+}
+
+.rect-left {
+    left: 10px; /* Position on the left corner */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+.rect-right {
+    right: 10px; /* Position on the right corner */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+/* Image Container */
+.image-container {
+    width: 100%;
+    padding-top: 100%; /* Makes the container square */
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Portfolio Title */
+.portfolio-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Portfolio Description */
+.portfolio-description {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Tech Stack */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: auto; /* Push the tech stack to the bottom */
+}
+
+.tech-item {
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.tech-item:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* General Styling */
+
+
+/* Class List Styling */
+
+    /* Class List */
+.class-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* Individual Class Item */
+.class-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.class-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Class Name and Code */
+.class-name {
+    flex: 3; 
+    text-align: left;
+}
+
+.class-code {
+    flex: 1; 
+    text-align: right;
+    color: #5a5858;
+}
+
+/* About Me Section */
+#about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5; 
+}
+
+.about-container {
+    max-width: 700px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.photo-container {
+    width: 300px; 
+    height: 300px;
+    margin: 0 auto 20px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+#about-me h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#about-me p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+

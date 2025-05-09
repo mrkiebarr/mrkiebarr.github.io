@@ -407,3 +407,104 @@ p {
     line-height: 1.6;
 }
 
+/* ─── Horizontal card layout ─────────────────────────────────────────── */
+
+/* Make each card a row instead of a column */
+.portfolio-item {
+    display: flex;             /* override column layout */
+    flex-direction: row;       /* image ↔ text */
+    align-items: flex-start;
+    width: 100%;               /* fill available space */
+    max-width: 900px;          /* optional cap per card */
+    height: auto;              /* let content define height */
+  }
+  
+  /* Shrink/remove the square‑padding hack */
+  .portfolio-item .image-container {
+    flex: 0 0 250px;           /* fixed width, no grow */
+    padding-top: 0;            /* remove 1:1 aspect trick */
+    margin: 0;                 
+    height: auto;
+    position: relative;
+  }
+  
+  /* Let the image scale naturally */
+  .portfolio-item .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  /* Stack title, text and tech-stack vertically */
+  .portfolio-item .portfolio-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;                   /* take remaining space */
+    margin-left: 1rem;         /* gap between image & text */
+  }
+  
+  /* Responsive: back to vertical on narrow screens */
+  @media (max-width: 768px) {
+    .portfolio-item {
+      flex-direction: column;
+      max-width: 100%;
+    }
+    .portfolio-item .image-container {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .portfolio-item .portfolio-body {
+      margin-left: 0;
+    }
+  }
+
+  /* ─── Fixed‑height horizontal cards with scrollable text ───────────────── */
+
+/* 1. Fix the card height */
+.portfolio-item {
+    height: 280px;            /* adjust as needed */
+    max-width: 900px;         /* per‑card width cap */
+    overflow: hidden;         /* hide anything beyond the box */
+  }
+  
+  /* 2. Make the image container fill that height */
+  .portfolio-item .image-container {
+    flex: 0 0 250px;          /* fixed width */
+    height: 100%;             /* full card height */
+    padding-top: 0;           /* remove square hack */
+    margin: 0;
+  }
+  
+  /* 3. Scale and crop the image to cover its container */
+  .portfolio-item .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* cover and crop if needed */
+    border-radius: 8px;
+  }
+  
+  /* 4. Allow the text+tech area to scroll vertically */
+  .portfolio-item .portfolio-body {
+    flex: 1;
+    margin-left: 1rem;
+    max-height: 100%;         /* cap to card height */
+    overflow-y: auto;         /* scroll if content is too tall */
+    padding-right: 0.5rem;    /* give scrollbar a bit of room */
+  }
+  
+  /* 5. Restore normal flow on small screens */
+  @media (max-width: 768px) {
+    .portfolio-item {
+      flex-direction: column;
+      height: auto;
+    }
+    .portfolio-item .image-container,
+    .portfolio-item .portfolio-body {
+      height: auto;
+    }
+    .portfolio-item .portfolio-body {
+      overflow: visible;
+      margin-left: 0;
+    }
+  }

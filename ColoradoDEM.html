@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author"      content="Sergey Pozhilov (GetTemplate.com)">
+	
+	<title>Alpine County: Rattlesnake - GIS</title>
+
+	<link rel="shortcut icon" href="assets/images/ZSZ_5364.JPG">
+	
+	<!-- Bootstrap -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- Icon font -->
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="assets/css/about.css">
+	<link rel="stylesheet" href="assets/css/styles-index.css">
+	<link rel="stylesheet" href="assets/css/slideshow.css"> <!-- Add this line -->
+
+	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
+	<style>
+		#head {
+			background-image: url('assets/images/pastelgreen.jpg');
+			background-size: cover;
+			background-position: center;
+			height: 180px; /* Adjust height as needed */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		</style>
+</head>
+<body>
+
+<main id="main">
+
+	<div class="container">
+
+
+		<div id="navbar-1">
+			
+			<div id="navbar-2">
+				<div class="navbar-item"><a href="project.html" > back to projects</a></div>
+			</div>
+		</div>
+
+		<div class="row topspace">
+			
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">DEM Generation from LiDAR Ground Points Using Cloud Compare and QGIS3</h1>
+				</header>
+
+				<!-- Slideshow container -->
+				<div class="slideshow-container">
+					<div class="mySlides">
+						<img src="assets/images/DEM Portfolio.jpg" alt="Image 1">
+					</div> 
+					<div class="mySlides">
+						<img src="assets/images/DEM.png" alt="Image 2">
+					</div> 
+                    <div class="mySlides">
+						<img src="assets/images/Lower Colorado DEM.png" alt="Image 3">
+					</div> 
+                    <div class="mySlides">
+						<img src="assets/images/QGISProcess.png" alt="Image 4">
+					</div> 
+				</div>
+				<br>
+
+				<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span> 
+					<span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+				</div>
+
+                <p>
+                    This project involved generating a Digital Elevation Model (DEM) for a segment of the Lower Colorado River near Yuma, Arizona, using publicly available LiDAR data and open-source geospatial tools. The goal was to demonstrate a full workflow from raw point cloud to georeferenced elevation model.
+                  </p>
+                  
+                  <p>
+                    The workflow involved:
+                  </p>
+                  <ul>
+                    <li>Downloading and preprocessing USGS LiDAR data in CloudCompare</li>
+                    <li>Filtering ground-classified points and rendering a grayscale elevation PNG</li>
+                    <li>Manually georeferencing the image in QGIS using terrain features visible in Google Earth Pro</li>
+                    <li>Generating a rasterized elevation layer and applying DEM symbology</li>
+                    <li>Running statistical summaries and styling the output for interpretation</li>
+                  </ul>
+                  
+                  
+                  <p>
+                    <strong>Applications & Skills Demonstrated</strong><br>
+                    This project showcases the ability to turn raw LiDAR data into meaningful terrain outputs using open-source tools, applicable to:
+                  </p>
+                  <ul>
+                    <li>Floodplain analysis and flood risk mapping</li>
+                    <li>Habitat and riparian zone restoration planning</li>
+                    <li>Preliminary terrain modeling for civil infrastructure projects</li>
+                  </ul>
+                  
+
+
+		
+			</article>
+			<!-- /Article -->
+
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+
+				<div class="widget">
+					<h4>Tools & Specialization:</h4>
+					<ul>
+						<li> QGIS3 </li>
+						<li> CloudCompare </li>
+                        <li> LiDAR</li>
+						<li> USGS </li>
+						<li> DEM </li>
+                        <li> OpenTopography </li>
+                        <li> Spatial Data Collection </li>
+						
+					</ul>
+				</div>
+			</aside>			
+			<!-- /Sidebar -->
+			
+		</div>
+	</div>	<!-- /container -->
+	
+</main>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="assets/js/template.js"></script>
+
+<!-- Slideshow script -->
+<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		let dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+	}
+</script>
+
+</body>
+</html>

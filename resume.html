@@ -7,6 +7,28 @@
     <meta name="author" content="Mark David Barranda">
     <title>Resume - Mark David Barranda</title>
     <link rel="stylesheet" href="assets/css/styles-index.css">
+    <style>
+        .resume-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            gap: 1rem;
+        }
+
+        .resume-buttons button {
+            padding: 0.5rem 1.5rem;
+            font-size: 1rem;
+            border: none;
+            background-color: #007b7f;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .resume-buttons button:hover {
+            background-color: #005f62;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,15 +43,32 @@
 			</div>
 		</div>
 
+        <div class="resume-buttons">
+            <button onclick="loadResume('gis')">Geospatial Tech</button>
+            <button onclick="loadResume('ds')">Data Science</button>
+        </div>
+
         <div style="width: 100%; max-width: 900px; margin: 2rem auto; border: 1px solid #ddd; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
             <iframe
+              id="resumeViewer"
               src="https://drive.google.com/file/d/1swsJ34L0dN10wxFNOL3GyJV6-jsFim9H/preview"
               width="100%"
-              height="800"        
+              height="800"
               frameborder="0"
               allow="autoplay">
             </iframe>
         </div>
     </div>
+
+    <script>
+        function loadResume(type) {
+            const iframe = document.getElementById('resumeViewer');
+            const urls = {
+                gis: "https://drive.google.com/file/d/1n0b8JSSkEwBqmolF3OcvfZJq7WZ81xBs/preview", // GIS Resume
+                ds: "https://drive.google.com/file/d/1eoFfJjCEb3j7GIO6LoeitK-TYvjcw7Ow/preview"    // Data Science Resume
+            };
+            iframe.src = urls[type];
+        }
+    </script>
 </body>
 </html>

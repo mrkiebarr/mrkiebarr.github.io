@@ -258,7 +258,7 @@
 
 			<div class="portfolio-summaries-a">
 				<p data-filter="all" class="active" style="color: whitesmoke;">All</p>
-				<p data-filter="gis" style="color: whitesmoke;">GIS & Remote Sensing</p>
+				<p data-filter="gis" style="color: whitesmoke;">GIS Analysis & Remote Sensing</p>
 				<p data-filter="client" style="color:whitesmoke;">Data Science Portfolio</p>
 			</div>
 
@@ -314,7 +314,7 @@
 						<img src="assets/images/la2050.png" alt="GIS Project">
 					</div>
 					<div class="portfolio-body">
-						<h3 class="portfolio-title">LA Park Allocation Analysis</h3>
+						<h3 class="portfolio-title">Park Allocation Analysis</h3>
 						<p class="portfolio-description">I led a team of fellow GIS students in developing a story map for LA2050, an initiative by the Goldhirsh Foundation aimed at empowering Los Angeles. Given LA’s urban landscape, our team identified optimal locations for new recreation parks where health-risked residents can have access to recreation parks.</p>
 						<p class="portfolio-description">I pulled various relevant data, such as census, parcel, park needs assessment, existing parks, poverty distribution, slope, landslide, fault line, and a few more to highlight areas in need using Raster Suitability Analysis. Zonal Statistics and 3D modeling were used to complete the visualization of demographic information and the park model.</p>
 					
@@ -355,15 +355,16 @@
 					</div>
 				</a>
 
-				<a class="portfolio-item" data-category="client">
+				<a href="https://www.nature.org/en-us/what-we-do/our-priorities/protect-water-and-land/" class="portfolio-item" data-category="client">
 					<div class="image-container">
 						<img src="assets/images/stream-gage.jpg" alt="Data Science Project">
 					</div>
 
 					<div class="portfolio-body">
 						<h3 class="portfolio-title">The Nature Conservancy</h3>
-						<em>Enhancing Streamflow Predictions with Statistical Methods and Dynamic Windowing [NOT publicly accessible]</em>
+						<em>Enhancing Streamflow Predictions with Statistical Methods and Dynamic Windowing</em>
 					
+						<p class="portfolio-description">[NOT publicly accessible]</p>
 						<p class="portfolio-description">
 							Developed StreamSage 2.0, an interactive dashboard powered by StreamLit which allows users to select n gages at any given day and observe streamflow behavior at different locations across California. </p>
 							
@@ -379,6 +380,66 @@
 							<span class="tech-item">ARIMA</span>
 							<span class="tech-item">Streamlit</span>
 							<span class="tech-item">Matplotlin/Seaborn</span>
+						</div>
+					</div>
+				</a>
+
+				<a href="https://drive.google.com/file/d/19-glA4zf0Uz7WXG0Si5VC8z58vxOs7Ts/view?usp=sharing" class="portfolio-item" data-category="gis">
+		
+					<div class="image-container">
+						<img src="assets/images/bigfoot.jpg" alt="Data Science Project">
+					</div>
+
+					<div class="portfolio-body">
+						<h3 class="portfolio-title">Bigfoot Suitability Analysis</h3>
+						<p class="portfolio-description">
+						GIS Final project in which I utilized all the tools derived from labs, along with data from National Landcover Database + real-world datapoints on sitings dating back to 1950s to assess habitat suitability and movement patterns of Bigfoot. 
+						</p>
+						<div class="tech-stack">
+							<span class="tech-item">ArcGIS Pro</span>
+							<span class="tech-item">Python</span>
+							<span class="tech-item">Global Moran's I</span>
+							<span class="tech-item">Raster Data</span>
+						</div>
+					</div>
+				</a>
+
+				<a href="https://drive.google.com/file/d/1k9I8SFRmQdb5_yT9_gAEwEfJyEQ4weJJ/view?usp=sharing" class="portfolio-item" data-category="gis">
+					<div class="image-container">
+						<img src="assets/images/sf-mission.png" alt="Data Science Project">
+					</div>
+					
+					<div class="portfolio-body">
+						<h3 class="portfolio-title">Network Analysis: San Francisco</h3>
+						<p class="portfolio-description">
+						I used Network Analyst tools to calculate accessibility for Top SF Restaurants, Public Schools, and Fire Stations, and the Location-Allocation solver to identify best neighborhoods and optimal voter registration centers in SF. Service area polygons were generated using travel time as the impedance, and raster analysis was conducted to assess neighborhood accessibility.</p>
+						<p class="portfolio-description">
+						The first map shows the best and worst neighborhoods in SF, and the other 15 Top SF Restaurants that could serve 68.7% of the target population (455,941 people), nearly reaching the 70% target.
+						</p>
+						<div class="tech-stack">
+							<span class="tech-item">Service Area Tool</span>
+							<span class="tech-item">ArcGis Pro</span>
+							<span class="tech-item">Network Analysis</span>
+						<span class="tech-item">SQL</span>
+						</div>
+					</div>
+				</a>
+
+				<a href="https://drive.google.com/file/d/1zrrfiSUlFIXThQMJ7bL7tzkp6_gMBv0l/view?usp=sharing" class="portfolio-item" data-category="gis">
+		
+					<div class="image-container">
+						<img src="assets/images/interpolation.png" alt="Data Science Project">
+					</div>
+
+					<div class="portfolio-body">
+						<h3 class="portfolio-title">Hotspot Analysis: Oakland City</h3>
+						<p class="portfolio-description">
+						GIS Lab work utilizing three spatial interpolation techniques: IDW, Spline, and Natural Neighbors. Click to read more.
+						</p>
+						<div class="tech-stack">
+							<span class="tech-item">Google Earth Pro</span>
+							<span class="tech-item">ArcGis Pro</span>
+							<span class="tech-item">Spatial Interpolation</span>
 						</div>
 					</div>
 				</a>
@@ -426,47 +487,6 @@
 					</div>
 				</a>
 
-				<a href="https://drive.google.com/file/d/19-glA4zf0Uz7WXG0Si5VC8z58vxOs7Ts/view?usp=sharing" class="portfolio-item" data-category="gis">
-		
-					<div class="image-container">
-						<img src="assets/images/bigfoot.jpg" alt="Data Science Project">
-					</div>
-
-					<div class="portfolio-body">
-						<h3 class="portfolio-title">Bigfoot Suitability Analysis</h3>
-						<p class="portfolio-description">
-						GIS Final project in which I utilized all the tools derived from labs, along with data from National Landcover Database + real-world datapoints on sitings dating back to 1950s to assess habitat suitability and movement patterns of Bigfoot. 
-						</p>
-						<div class="tech-stack">
-							<span class="tech-item">ArcGIS Pro</span>
-							<span class="tech-item">Python</span>
-							<span class="tech-item">Global Moran's I</span>
-							<span class="tech-item">Raster Data</span>
-						</div>
-					</div>
-				</a>
-
-				<a href="https://drive.google.com/file/d/1k9I8SFRmQdb5_yT9_gAEwEfJyEQ4weJJ/view?usp=sharing" class="portfolio-item" data-category="gis">
-					<div class="image-container">
-						<img src="assets/images/sf-mission.png" alt="Data Science Project">
-					</div>
-					
-					<div class="portfolio-body">
-						<h3 class="portfolio-title">Network Analysis: San Francisco</h3>
-						<p class="portfolio-description">
-						I used Network Analyst tools to calculate accessibility for Top SF Restaurants, Public Schools, and Fire Stations, and the Location-Allocation solver to identify best neighborhoods and optimal voter registration centers in SF. Service area polygons were generated using travel time as the impedance, and raster analysis was conducted to assess neighborhood accessibility.</p>
-						<p class="portfolio-description">
-						The first map shows the best and worst neighborhoods in SF, and the other 15 Top SF Restaurants that could serve 68.7% of the target population (455,941 people), nearly reaching the 70% target.
-						</p>
-						<div class="tech-stack">
-							<span class="tech-item">Service Area Tool</span>
-							<span class="tech-item">ArcGis Pro</span>
-							<span class="tech-item">Network Analysis</span>
-						<span class="tech-item">SQL</span>
-						</div>
-					</div>
-				</a>
-
 				<a href="yangtze.html" class="portfolio-item" data-category="gis">
 					<div class="image-container">
 						<img src="assets/images/yangtze.jpg" alt="Data Science Project" data-category="gis">
@@ -481,25 +501,6 @@
 							<span class="tech-item">Google Earth Pro</span>
 							<span class="tech-item">ArcGis Pro</span>
 							<span class="tech-item">NLCD</span>
-						</div>
-					</div>
-				</a>
-
-				<a href="https://drive.google.com/file/d/1zrrfiSUlFIXThQMJ7bL7tzkp6_gMBv0l/view?usp=sharing" class="portfolio-item" data-category="gis">
-		
-					<div class="image-container">
-						<img src="assets/images/interpolation.png" alt="Data Science Project">
-					</div>
-
-					<div class="portfolio-body">
-						<h3 class="portfolio-title">Hotspot Analysis: Oakland City Crimes</h3>
-						<p class="portfolio-description">
-						GIS Lab work utilizing three spatial interpolation techniques: IDW, Spline, and Natural Neighbors. Click to read more.
-						</p>
-						<div class="tech-stack">
-							<span class="tech-item">Google Earth Pro</span>
-							<span class="tech-item">ArcGis Pro</span>
-							<span class="tech-item">Spatial Interpolation</span>
 						</div>
 					</div>
 				</a>

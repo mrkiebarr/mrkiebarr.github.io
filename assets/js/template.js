@@ -36,3 +36,30 @@ jQuery(document).ready(function($) {
 	});
 
 });
+
+// === Portfolio Modal Logic ===
+$('.portfolio-item').on('click', function(e) {
+    e.preventDefault(); // Prevent default link
+    var modal = $('#modal');
+    var body = modal.find('.modal-body');
+
+    var clone = $(this).clone();
+    var link = $(this).attr('href');
+    
+    if (link) {
+        clone.find('.tech-stack').after(`<p><a href="${link}" class="button" target="_blank">Click to View</a></p>`);
+    }
+
+    body.html(clone);
+    modal.fadeIn(200);
+});
+
+$('.close-button').on('click', function() {
+    $('#modal').fadeOut(200);
+});
+
+$(window).on('click', function(e) {
+    if ($(e.target).is('#modal')) {
+        $('#modal').fadeOut(200);
+    }
+});

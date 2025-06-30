@@ -69,35 +69,35 @@ html {
     border-color: #cccccc;
   }
   .navbar-default .navbar-nav > li > a {
-    color: #454545;
+    color: #ffffff;
   }
   .navbar-default .navbar-nav > li > a:hover,
   .navbar-default .navbar-nav > li > a:focus {
-    color: #000000;
+    color: #ffffff;
     background-color: #ffffff;
   }
   .navbar-default .navbar-nav > .active > a,
   .navbar-default .navbar-nav > .active > a:hover,
   .navbar-default .navbar-nav > .active > a:focus {
-    color: #000000;
+    color: #ffffff;
     background-color: #ffffff;
   }
   .navbar-default .dropdown ul.dropdown-menu > li > a {
-    color: #454545;
+    color: #ffffff;
   }
   .navbar-default .dropdown ul.dropdown-menu > li > a:hover {
     background-color: #eeeeee;
-    color: #000000;
+    color: #ffffff;
   }
   .navbar-default .navbar-toggle {
-    border-color: #666666;
+    border-color: #ffffff;
   }
   .navbar-default .navbar-toggle:hover,
   .navbar-default .navbar-toggle:focus {
     background-color: #ffffff;
   }
   .navbar-default .navbar-toggle .icon-bar {
-    background-color: #333333;
+    background-color: #ffffff;
   }
   .navbar-default .navbar-collapse,
   .navbar-default .navbar-form {
@@ -109,38 +109,7 @@ html {
     background-color: #ffffff;
     color: #000000;
   }
-  /****************************************************************************************
-  
-  
-                                       Sidebar special Nav
-  
-  
-  *****************************************************************************************/
-  .nav-side {
-    font-size: 24px;
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-top: -0.37em;
-  }
-  .nav-side > li > a {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: #f392b4;
-  }
-  .nav-side > li > a:hover {
-    color: #bd1550;
-    background: none;
-  }
-  .nav-side > li.active > a {
-    color: #bd1550;
-  }
-  /*********************************************************************
-  
-  
-                                  TYPOGRAPHY
-  
-  
-  **********************************************************************/
+
   p {
     line-height: 1.6em;
     margin: 0 0 30px 0;
